@@ -1,14 +1,24 @@
 import numpy as np
 
-x1=np.random.random((3,1));
-x2=np.random.random((3,1));
-x3=x1+x2;
-x4=[]
-print(x3);
-for i in x3:
-    if(i>1):
-        x4.append(1);
+
+
+x3=np.random.random_integers(7,size=(4,2))
+
+
+x4=map( lambda x:x[0]+x[1],x3)
+
+print(x4)
+y=[];
+for i in x4:
+    if(i>5):
+        y.append(1)
     else:
-        x4.append(-1);
-    
-print(x4);
+        y.append(-1)    
+print(y)
+            
+
+
+
+ 
+
+
