@@ -18,16 +18,28 @@ class ImageViewer(Frame):
         self.draw_ids = list()
         self.rectangle_id = 0
         self.ratio = 0 """
+from mimetypes import init
+from matplotlib.pyplot import get
+import numpy as np
 
-data =[
-    [255,0,255],
-    [255,0,255],
-    [255,0,255],
-    [255,0,255],
-],
-[
-    [255,0,255],
-    [255,0,255],
-    [255,0,255],
-    [255,0,255],
-],
+Data_set=np.array([[0.325,0.768],
+                   [0.798,0.821]
+                  ,[0.364,0.417],
+                   [0.241,0.605]
+                  ,[0.653,0.488]])
+
+''' class x1:
+    def __init__(self,data):
+        self.data=data;
+    def sum(self):
+        print(self.data)
+test=x1(Data_set);
+test.sum(); '''
+
+w=[[1.2,0.1],[1.2,0.1],[1.2,0.1],[1.2,0.1],[1.2,0.1]]
+
+sum=(Data_set*w)+1.2;
+x4=map( lambda x:x[0]+x[1],sum)
+rnf=np.random.random_sample(size=(2,2))
+print(rnf)
+#print(x4)
