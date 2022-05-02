@@ -19,6 +19,7 @@ class ImageViewer(Frame):
         self.rectangle_id = 0
         self.ratio = 0 """
 from mimetypes import init
+from traceback import print_tb
 from matplotlib.pyplot import get
 import numpy as np
 
@@ -36,10 +37,18 @@ Data_set=np.array([[0.325,0.768],
 test=x1(Data_set);
 test.sum(); '''
 
-w=[[1.2,0.1],[1.2,0.1],[1.2,0.1],[1.2,0.1],[1.2,0.1]]
+w=np.array([[1.2,0.1],[1.2,0.1],[1.2,0.1],[1.2,0.1],[1.2,0.1]])
 
 sum=(Data_set*w)+1.2;
 x4=map( lambda x:x[0]+x[1],sum)
-rnf=np.random.random_sample(size=(2,2))
-print(rnf)
+rnf=np.random.random(size=(Data_set.shape))
+weights = [0 for i in range(len(Data_set[0]))]
+
+
+def init_wights_and_bias(data_length):
+    wights=np.random.random(size=(data_length))
+    wight_bias=0.5;
+    return wights,wight_bias;
+wigth=init_wights_and_bias(5)
+print(wigth)
 #print(x4)
