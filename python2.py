@@ -44,11 +44,13 @@ x4=map( lambda x:x[0]+x[1],sum)
 rnf=np.random.random(size=(Data_set.shape))
 weights = [0 for i in range(len(Data_set[0]))]
 
-
+wight_bias=0.5;
 def init_wights_and_bias(data_length):
     wights=np.random.random(size=(data_length))
-    wight_bias=0.5;
-    return wights,wight_bias;
-wigth=init_wights_and_bias(5)
+    wights_bias=0.5;
+    return [wights,wights_bias];
+[wigth,wights_bias]=init_wights_and_bias(5)
 print(wigth)
+print(wights_bias)
+
 #print(x4)
